@@ -2,71 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Laksh Marketing and Solution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Our Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      text-align: center;
-      padding: 40px;
-    }
-    img.logo {
-      width: 120px;
-      margin-bottom: 20px;
-    }
-    h1 {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
       color: #333;
     }
-    p {
-      color: #555;
+    header, footer {
+      background-color: #004d40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #00796b;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo {
+      width: 300px;
+      display: block;
+      margin: 30px auto;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    .company-description {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
     }
     .product {
-      margin-top: 30px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+    .whatsapp {
+      font-size: 18px;
+      color: green;
+      font-weight: bold;
+    }
+    .whatsapp a {
+      color: green;
+      text-decoration: none;
+    }
+    .testimonials {
+      background-color: #f1f8e9;
+      padding: 30px;
+    }
+    .testimonial {
+      max-width: 600px;
+      margin: 10px auto;
+      font-style: italic;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #004d40;
       color: white;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      cursor: pointer;
     }
-    a {
-      text-decoration: none;
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .dark-mode header,
+    .dark-mode footer,
+    .dark-mode nav {
+      background-color: #1c1c1c;
     }
   </style>
 </head>
 <body>
 
-  <!-- LOGO -->
-  <img src="https://via.placeholder.com/120x80?text=Logo" alt="Laksh Logo" class="logo">
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-  <!-- Company Name -->
-  <h1>Welcome to Laksh Marketing and Solution</h1>
-  <p>We provide quality LED lighting solutions for homes and businesses.</p>
+  <header>
+    <h1>Welcome to Our Website</h1>
+  </header>
 
-  <!-- PRODUCT IMAGE -->
-  <div class="product">
-    <h2>Our Products</h2>
-    <img src="https://via.placeholder.com/300x200?text=LED+Lights" alt="LED Lights">
-  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- CONTACT BUTTON -->
-  <p style="margin-top: 30px;">
-    <a href="mailto:Laksh.indi@gmail.com">
-      <button>Email Us</button>
-    </a>
-    <a href="https://wa.me/9666337178" target="_blank" style="margin-left: 10px;">
-      <button style="background-color: #25D366;">WhatsApp</button>
-    </a>
-  </p>
+  <section id="home">
+    <img src="drop.png" alt="Company Logo" class="logo">
+    <div class="company-description">
+      <p>At Laksh Marketing & Solutions, we provide top-quality lighting products that brighten your life and business. With a commitment to innovation, energy-efficiency, and style, we’re your trusted partner for every lighting need.</p>
+    </div>
+  </section>
 
-  <!-- ABOUT US -->
-  <div class="about" style="margin-top: 50px;">
-    <h2>About Us</h2>
-    <p>We are a growing LED lighting provider offering efficient and eco-friendly lighting solutions.</p>
-  </div>
+  <section id="products">
+    <h2>Our Light Modules</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150.png?text=LED+Bulb" alt="LED Bulb">
+        <h3>LED Bulb</h3>
+        <p>Price: ₹100</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150.png?text=Tube+Light" alt="Tube Light">
+        <h3>Tube Light</h3>
+        <p>Price: ₹250</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150.png?text=Ceiling+Light" alt="Ceiling Light">
+        <h3>Ceiling Light</h3>
+        <p>Price: ₹500</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150.png?text=Decorative+Lamp" alt="Decorative Lamp">
+        <h3>Decorative Lamp</h3>
+        <p>Price: ₹750</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      "Laksh lights transformed my living room. Highly recommend!" – Priya R.
+    </div>
+    <div class="testimonial">
+      "Excellent quality and timely delivery. Will buy again." – Amit S.
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="whatsapp">WhatsApp us: <a href="https://wa.me/919666337178" target="_blank">9666337178</a></p>
+  </section>
+
+  <footer>
+    <p>Thank you and visit again!</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 
 </body>
 </html>
+
 
