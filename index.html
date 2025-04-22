@@ -3,187 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Our Website</title>
+  <title>LAKSH LED Lights</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      background: #f9f9f9;
       color: #333;
     }
-    header, footer {
-      background-color: #004d40;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 50px;
     }
     nav {
-      background-color: #00796b;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+      font-size: 14px;
     }
     nav a {
-      color: white;
-      margin: 0 20px;
+      margin: 0 10px;
       text-decoration: none;
-      font-weight: bold;
+      color: #007BFF;
     }
-    .logo {
-      width: 300px;
-      display: block;
-      margin: 30px auto;
-    }
-    section {
+    .page {
+      display: none;
       padding: 20px;
-      text-align: center;
     }
-    .company-description {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.6;
+    .active {
+      display: block;
     }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px 0;
-    }
-    .product {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
+    .product-img {
       width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .product:hover {
-      transform: scale(1.05);
-    }
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-    .whatsapp {
-      font-size: 18px;
-      color: green;
-      font-weight: bold;
-    }
-    .whatsapp a {
-      color: green;
-      text-decoration: none;
-    }
-    .testimonials {
-      background-color: #f1f8e9;
-      padding: 30px;
-    }
-    .testimonial {
-      max-width: 600px;
-      margin: 10px auto;
-      font-style: italic;
-    }
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 10px;
-      background-color: #004d40;
-      color: white;
-      border: none;
-      border-radius: 5px;
       cursor: pointer;
+      margin: 10px;
     }
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
     }
-    .dark-mode header,
-    .dark-mode footer,
-    .dark-mode nav {
-      background-color: #1c1c1c;
+    .slogan {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-
-  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
   <header>
-    <h1>Welcome to Our Website</h1>
+    <img src="/mnt/data/drop.png" alt="Laksh Logo">
+    <nav>
+      <a href="#" onclick="showPage(0)">Home</a>
+      <a href="#" onclick="showPage(1)">Light Info</a>
+      <a href="#" onclick="showPage(2)">About</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Page 1 -->
+  <div class="page active">
+    <h1>Welcome to LAKSH Lighting</h1>
+    <p>Explore our modern LED lighting designs:</p>
+    <img src="https://via.placeholder.com/200x150?text=Street+Light" class="product-img" onclick="showPage(1)">
+    <img src="https://via.placeholder.com/200x150?text=Flood+Light" class="product-img" onclick="showPage(1)">
+  </div>
 
-  <section id="home">
-    <img src="drop.png" alt="Company Logo" class="logo">
-    <div class="company-description">
-      <p>At Laksh Marketing & Solutions, we provide top-quality lighting products that brighten your life and business. With a commitment to innovation, energy-efficiency, and style, we’re your trusted partner for every lighting need.</p>
-    </div>
-  </section>
+  <!-- Page 2 -->
+  <div class="page">
+    <h2>Light Details</h2>
+    <p><strong>Price:</strong> ₹1500 - ₹7500 depending on model</p>
+    <p><strong>Made in:</strong> India, Hyderabad (L.B. Nagar)</p>
+    <div class="footer">For more info, call us at: <strong>9666337178</strong></div>
+  </div>
 
-  <section id="products">
-    <h2>Our Light Modules</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://via.placeholder.com/200x150.png?text=LED+Bulb" alt="LED Bulb">
-        <h3>LED Bulb</h3>
-        <p>Price: ₹100</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x150.png?text=Tube+Light" alt="Tube Light">
-        <h3>Tube Light</h3>
-        <p>Price: ₹250</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x150.png?text=Ceiling+Light" alt="Ceiling Light">
-        <h3>Ceiling Light</h3>
-        <p>Price: ₹500</p>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x150.png?text=Decorative+Lamp" alt="Decorative Lamp">
-        <h3>Decorative Lamp</h3>
-        <p>Price: ₹750</p>
-      </div>
-    </div>
-  </section>
+  <!-- Page 3 -->
+  <div class="page">
+    <h2>About LAKSH Marketing & Solutions</h2>
+    <p>We specialize in top-quality LED lighting products and smart energy solutions for residential, commercial, and industrial use.</p>
 
-  <section class="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial">
-      "Laksh lights transformed my living room. Highly recommend!" – Priya R.
-    </div>
-    <div class="testimonial">
-      "Excellent quality and timely delivery. Will buy again." – Amit S.
-    </div>
-  </section>
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li>Clean and bright website design</li>
+      <li>Clear navigation and product categories</li>
+      <li>Product specs, reviews, and quote options</li>
+      <li>Energy-saving guides and FAQs</li>
+      <li>Project portfolios for B2B confidence</li>
+      <li>Easy support and mobile-optimized site</li>
+    </ul>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p class="whatsapp">WhatsApp us: <a href="https://wa.me/919666337178" target="_blank">9666337178</a></p>
-  </section>
-
-  <footer>
-    <p>Thank you and visit again!</p>
-  </footer>
+    <div class="slogan">"Brightening Your Future with Smart Lighting"</div>
+    <div class="slogan">"Lighting the Path to a Greener Tomorrow"</div>
+  </div>
 
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+    function showPage(index) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      pages[index].classList.add('active');
     }
   </script>
-
 </body>
 </html>
+
 
 
