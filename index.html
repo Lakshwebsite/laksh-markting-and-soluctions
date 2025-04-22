@@ -1,172 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LAKSH Marketing & Solutions</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f9ff;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .hero {
-      background: linear-gradient(120deg, #009dff, #63c9f5);
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-top: 5px;
-    }
-
-    .container {
-      padding: 30px 20px;
-    }
-
-    .product-img {
-      width: 200px;
-      cursor: pointer;
-      margin: 20px;
-      border-radius: 5px;
-      transition: transform 0.3s ease;
-    }
-
-    .product-img:hover {
-      transform: scale(1.05);
-    }
-
-    .page {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
-
-    ul {
-      margin: 10px 0 0 20px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #444;
-    }
-
-    .slogan {
-      text-align: center;
-      margin: 30px 0;
-      font-size: 20px;
-      font-weight: bold;
-      color: #007BFF;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <img src="/mnt/data/drop.png" alt="LAKSH Logo">
-    <nav>
-      <a href="#" onclick="showPage(0)">Home</a>
-      <a href="#" onclick="showPage(1)">Light Info</a>
-      <a href="#" onclick="showPage(2)">About</a>
-    </nav>
-  </header>
-
-  <!-- Hero Banner -->
-  <div class="hero">
-    <h1>Welcome to LAKSH Marketing & Solutions</h1>
-    <p>Powering Tomorrow with Bright Ideas</p>
-  </div>
-
-  <!-- Page 1: Product Designs -->
-  <div class="page active container">
-    <h2>Explore Our LED Designs</h2>
-    <p>Click a product to learn more:</p>
-    <img src="https://via.placeholder.com/200x150?text=Street+Light" class="product-img" onclick="showPage(1)">
-    <img src="https://via.placeholder.com/200x150?text=Flood+Light" class="product-img" onclick="showPage(1)">
-  </div>
-
-  <!-- Page 2: Light Info -->
-  <div class="page container">
-    <h2>Light Specifications & Details</h2>
-    <p><strong>Price:</strong> ₹1500 – ₹7500 depending on the model</p>
-    <p><strong>Manufactured in:</strong> India, Hyderabad (L.B. Nagar)</p>
-    <div class="footer">
-      📞 For more information, contact: <strong>9666337178</strong>
-    </div>
-  </div>
-
-  <!-- Page 3: About + Best Practices -->
-  <div class="page container">
-    <h2>About LAKSH Marketing & Solutions</h2>
-    <p>We provide innovative LED lighting solutions tailored for homes, offices, and industries.</p>
-
-    <h3>What Makes a Great LED Lighting Website?</h3>
-    <ul>
-      <li>✔ Clean and bright design</li>
-      <li>✔ Clear and user-friendly navigation</li>
-      <li>✔ Organized product showcase</li>
-      <li>✔ Technical info, guides, and comparisons</li>
-      <li>✔ Project portfolios for credibility</li>
-      <li>✔ Quick contact support and mobile-friendly</li>
-      <li>✔ SEO and fast-loading optimized</li>
-    </ul>
-
-    <div class="slogan">"Brightening Your Future with Smart Lighting"</div>
-    <div class="slogan">"Lighting the Path to a Greener Tomorrow"</div>
-  </div>
-
-  <!-- Script to Toggle Pages -->
-  <script>
-    function showPage(index) {
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(p => p.classList.remove('active'));
-      pages[index].classList.add('active');
-    }
-  </script>
-</body>
-</html>
-
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminova LED | Premium Lighting Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #0066ff;
+            --secondary: #00cc99;
+            --dark: #222222;
+            --light: #f8f9fa;
+            --accent: #ff6600;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background: #e65c00;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20…
